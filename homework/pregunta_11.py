@@ -16,3 +16,23 @@ def pregunta_11():
 
 
     """
+    with open("files\input/data.csv", "r") as file:
+        data = file.readlines()
+
+    result = {}
+    for line in data:
+        columnas = line.strip().split("\t")
+        col2 = int(columnas[1])
+        col4 = columnas[3].split(",")
+
+        for letra in col4:
+            if letra in result:
+                result[letra] += col2
+            else: 
+                result[letra] = col2
+
+    return dict(sorted(result.items()))
+
+
+
+            

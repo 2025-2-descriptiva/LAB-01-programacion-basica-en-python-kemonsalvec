@@ -26,3 +26,14 @@ def pregunta_04():
      ('12', 3)]
 
     """
+    conteo_meses = {}
+    with open("files\input/data.csv", "r") as file:
+        for line in file:
+            fecha = line.split("\t")[2]
+            mes = fecha.split("-")[1]
+            if mes in conteo_meses:
+                conteo_meses[mes] += 1
+            else: 
+                conteo_meses[mes] = 1
+        return sorted(conteo_meses.items())
+        

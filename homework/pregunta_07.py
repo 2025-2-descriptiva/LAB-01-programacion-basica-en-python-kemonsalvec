@@ -25,3 +25,15 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
+    grupo = {}
+    with open("files\input/data.csv", "r") as file:
+        for line in file:
+            parts = line.strip().split("\t")
+            letter = parts[0]
+            number = int(parts[1])
+            if number in grupo:
+                grupo[number].append(letter)
+            else:
+                grupo[number] = [letter]
+    result = [(key, grupo[key]) for key in sorted(grupo.keys())]
+    return result

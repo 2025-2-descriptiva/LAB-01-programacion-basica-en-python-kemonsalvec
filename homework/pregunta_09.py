@@ -24,3 +24,18 @@ def pregunta_09():
      'jjj': 18}}
 
     """
+    resultado = {}
+    with open("files\input/data.csv", "r") as file:
+        for line in file:
+            columnas = line.strip().split("\t")
+            claves = columnas[4].split(",")
+            for clave in claves:
+                letra = clave.split(":")[0]
+                if letra in resultado:
+                    resultado[letra] += 1
+                else:
+                    resultado[letra] = 1
+    return resultado
+
+
+    
