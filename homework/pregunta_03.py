@@ -26,3 +26,4 @@ def pregunta_03():
             else:
                 sums[letter] = number
     return sorted(sums.items())
+
