@@ -27,7 +27,7 @@ def pregunta_06():
 
     """
     key_values = {}
-    with open("files\input/data.csv", "r") as file:
+    with open("files/input/data.csv", "r") as file:
         for line in file:
             parts = line.strip().split("\t")
             dict_part = parts[4].split(",")

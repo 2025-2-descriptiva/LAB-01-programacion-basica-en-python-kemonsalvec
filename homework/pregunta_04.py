@@ -27,7 +27,7 @@ def pregunta_04():
 
     """
     conteo_meses = {}
-    with open("files\input/data.csv", "r") as file:
+    with open("files/input/data.csv", "r") as file:
         for line in file:
             fecha = line.split("\t")[2]
             mes = fecha.split("-")[1]

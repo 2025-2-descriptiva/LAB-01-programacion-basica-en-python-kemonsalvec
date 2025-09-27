@@ -28,7 +28,7 @@ def pregunta_08():
 
     """
     grupo = {}
-    with open("files\input/data.csv", "r") as file:
+    with open("files/input/data.csv", "r") as file:
         for line in file:
             parts = line.strip().split("\t")
             letter = parts[0]

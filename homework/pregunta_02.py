@@ -16,7 +16,7 @@ def pregunta_02():
 
     """
     counts = {}
-    with open("files\input/data.csv", "r") as file:
+    with open("files/input/data.csv", "r") as file:
         for line in file:
             letter = line[0]
             if letter in counts:

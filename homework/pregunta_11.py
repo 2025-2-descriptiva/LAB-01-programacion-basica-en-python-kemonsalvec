@@ -16,7 +16,7 @@ def pregunta_11():
 
 
     """
-    with open("files\input/data.csv", "r") as file:
+    with open("files/input/data.csv", "r") as file:
         data = file.readlines()
 
     result = {}
